@@ -1,0 +1,362 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 64px;
+  background: rgba(255,255,255,0.94);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  transition: gap 0.2s;
+}
+.back:hover { gap: 14px; }
+
+.headerMeta {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.hero {
+  background: var(--navy-dark);
+  padding: 90px 48px 72px;
+}
+
+.heroInner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.heroLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  font-size: clamp(44px, 6vw, 80px);
+  font-weight: 200;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.heroAccent {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.heroSub {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.04em;
+}
+
+/* ── Timeline outer wrapper ───────────────────────────────── */
+.timelineOuter {
+  position: relative;
+  background: var(--gray-light);
+  padding: 0;
+}
+
+/* ── Scroll wrapper ───────────────────────────────────────── */
+.scrollWrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+  padding: 0 0 48px;
+  /* hide scrollbar */
+  scrollbar-width: none;
+}
+.scrollWrapper::-webkit-scrollbar { display: none; }
+
+/* ── Track (the inner flex row) ──────────────────────────── */
+.track {
+  display: flex;
+  align-items: stretch;
+  min-width: max-content;
+  padding-top: 48px;
+}
+
+.endCap {
+  width: 120px;
+  flex-shrink: 0;
+  /* carries half the dotRow line to left/right edges */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Invisible dotRow inside endCap — just extends the line */
+.endCap::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: rgba(28,53,87,0.2);
+  align-self: center;
+  margin-top: calc(260px + 10px); /* topHalf height + half dot height */
+}
+
+/* ── Event column ─────────────────────────────────────────── */
+.eventCol {
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Top / bottom halves ──────────────────────────────────── */
+.half {
+  width: 100%;
+  height: 260px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+}
+
+/* Card in top half sits at the BOTTOM (nearest the line) */
+.topHalf {
+  justify-content: flex-end;
+}
+
+/* Card in bottom half sits at the TOP (nearest the line) */
+.bottomHalf {
+  justify-content: flex-start;
+}
+
+/* ── Connector (card → dot) ───────────────────────────────── */
+.connector {
+  flex-shrink: 0;
+  width: 1px;
+  flex: 1;
+  min-height: 20px;
+  background: rgba(28,53,87,0.18);
+}
+
+/* ── Dot row — creates the continuous horizontal line ─────── */
+.dotRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Line segments that flank each dot */
+.dotRow::before,
+.dotRow::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(28,53,87,0.22);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 3px solid var(--gray-light);
+  outline: 1.5px solid var(--navy);
+  flex-shrink: 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.eventCol:hover .dot {
+  transform: scale(1.35);
+  box-shadow: 0 0 0 4px rgba(28,53,87,0.12);
+}
+
+.dotUpcoming {
+  background: var(--gray-light);
+  outline: 1.5px dashed var(--navy);
+  animation: pulseDot 2.2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(28,53,87,0.0); }
+  50%       { box-shadow: 0 0 0 7px rgba(28,53,87,0.13); }
+}
+
+/* ── Event card ───────────────────────────────────────────── */
+.card {
+  width: 228px;
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: border-color 0.22s, box-shadow 0.22s, transform 0.28s cubic-bezier(0.22,1,0.36,1);
+}
+
+.cardLinked:hover {
+  border-color: rgba(28,53,87,0.32);
+  box-shadow: 0 8px 28px rgba(28,53,87,0.10);
+  transform: translateY(-5px);
+}
+
+.cardUpcoming {
+  border-style: dashed;
+  border-color: rgba(28,53,87,0.22);
+  background: rgba(255,255,255,0.7);
+}
+
+.cardTag {
+  align-self: flex-start;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: rgba(28,53,87,0.06);
+  border: 1px solid rgba(28,53,87,0.12);
+  padding: 3px 8px;
+}
+
+.cardDate {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--gray);
+  margin-top: 2px;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.cardDesc {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--gray);
+  line-height: 1.65;
+}
+
+.cardAction {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-top: 2px;
+  transition: gap 0.2s;
+}
+
+.cardLinked:hover .cardAction {
+  gap: 9px;
+}
+
+/* ── Upcoming badge ───────────────────────────────────────── */
+.upcomingBadge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-top: 2px;
+}
+
+.upcomingPulse {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--navy);
+  flex-shrink: 0;
+  animation: pulseDot 2.2s ease-in-out infinite;
+}
+
+/* ── Right-edge fade hint ─────────────────────────────────── */
+.fadeRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 140px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, var(--gray-light) 85%);
+  pointer-events: none;
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+.footer {
+  padding: 32px 48px;
+  background: var(--gray-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+}
+
+.footerBack {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  transition: opacity 0.2s;
+}
+.footerBack:hover { opacity: 0.7; }
+
+.footerName {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--gray);
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .header { padding: 0 24px; }
+  .hero { padding: 70px 24px 56px; }
+  .footer { padding: 24px; }
+}

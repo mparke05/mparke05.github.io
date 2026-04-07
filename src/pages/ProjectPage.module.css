@@ -1,0 +1,439 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Scroll reveal utility used by RevealSection */
+.revealBlock {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity   0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.revealVisible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Header bar */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  transition: gap 0.2s;
+}
+
+.back:hover {
+  gap: 14px;
+}
+
+.headerMeta {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy-dark);
+  padding: 100px 48px 80px;
+}
+
+/* Background photo layer — screen blend on dark navy gives a
+   "glowing through darkness" effect without obscuring the text */
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.22;
+  mix-blend-mode: screen;
+  filter: blur(1px);
+  transform: scale(1.03); /* slightly oversized to hide blur edge artifacts */
+  animation: heroBgIn 1.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes heroBgIn {
+  from {
+    opacity: 0;
+    transform: scale(1.10);
+  }
+  to {
+    opacity: 0.22;
+    transform: scale(1.03);
+  }
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.projectId {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: clamp(42px, 6vw, 80px);
+  font-weight: 200;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: #fff;
+  margin-bottom: 36px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+.tag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 5px 12px;
+}
+
+/* Highlights */
+.highlights {
+  background: var(--navy);
+  padding: 0 48px;
+}
+
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+}
+
+.highlight {
+  flex: 1;
+  padding: 40px 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.highlight:first-child {
+  padding-left: 0;
+}
+
+.highlight:last-child {
+  border-right: none;
+}
+
+.highlightMetric {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.highlightLabel {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Content */
+.content {
+  padding: 100px 48px;
+}
+
+.contentInner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.sectionLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionLabel::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--navy);
+}
+
+.overviewText {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.8;
+  position: sticky;
+  top: 80px;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.section {
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sectionHeading {
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.sectionBody {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--gray);
+  line-height: 1.85;
+}
+
+/* ── Photo gallery ───────────────────────────────────────── */
+.gallerySection {
+  background: var(--navy-dark);
+  padding: 72px 48px;
+}
+
+.galleryInner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.galleryLabel {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.galleryLabel::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+/* 3×3 grid — center column and center row are wider/taller
+   so the featured image (index 4) naturally sits larger */
+.galleryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.65fr 1fr;
+  grid-template-rows: 190px 270px 190px;
+  gap: 5px;
+}
+
+/* Simple even grid for galleries without a designated featured image */
+.galleryGridSimple {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 280px 280px;
+}
+
+.galleryCell {
+  overflow: hidden;
+  position: relative;
+  cursor: zoom-in;
+}
+
+/* Subtle inner glow on the featured center cell */
+.galleryCellFeatured::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 1.5px rgba(255,255,255,0.18);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.galleryImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.82) saturate(0.9);
+  transform-origin: center center;
+  transition:
+    transform  0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    filter     0.45s ease;
+  will-change: transform;
+}
+
+.galleryCell:hover .galleryImg {
+  transform: scale(1.1);
+  filter: brightness(1) saturate(1.05);
+}
+
+/* Featured image starts slightly less dimmed */
+.galleryCellFeatured .galleryImg {
+  filter: brightness(0.92) saturate(0.95);
+}
+
+.galleryCellFeatured:hover .galleryImg {
+  transform: scale(1.07);
+  filter: brightness(1.04) saturate(1.08);
+}
+
+@media (max-width: 768px) {
+  .gallerySection { padding: 48px 24px; }
+  .galleryGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .galleryCell { aspect-ratio: 4/3; }
+}
+
+/* Pagination */
+.pagination {
+  border-top: 1px solid var(--border);
+  padding: 0 48px;
+}
+
+.paginationInner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 48px 0;
+}
+
+.pageLink {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 300px;
+  transition: opacity 0.2s;
+}
+
+.pageLink:hover {
+  opacity: 0.7;
+}
+
+.pageLinkRight {
+  align-items: flex-end;
+}
+
+.pageLinkDir {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.pageLinkTitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+/* Footer */
+.footer {
+  padding: 32px 48px;
+  background: var(--gray-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+}
+
+.footerBack {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  transition: opacity 0.2s;
+}
+
+.footerBack:hover {
+  opacity: 0.7;
+}
+
+.footerName {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .header { padding: 0 24px; }
+  .hero { padding: 80px 24px 60px; }
+  .highlights { padding: 0 24px; }
+  .inner { flex-direction: column; }
+  .highlight { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 24px 0; }
+  .content { padding: 60px 24px; }
+  .contentInner { grid-template-columns: 1fr; gap: 40px; }
+  .overviewText { position: static; }
+  .pagination { padding: 0 24px; }
+  .footer { padding: 24px; }
+}

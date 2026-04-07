@@ -1,0 +1,264 @@
+.projects {
+  padding: 140px 48px;
+  background: var(--gray-light);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.sectionLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.sectionLabel::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--navy);
+}
+
+.heading {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.featuredGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-bottom: 2px;
+}
+
+.restGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+/* Header scroll reveal */
+.header {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity   0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.headerVisible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Card base */
+.card {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  padding: 0;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  /* Scroll reveal — starts hidden */
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity   0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cardVisible {
+  opacity: 1;
+  transform: none;
+}
+
+.cardLarge .cardContent {
+  padding: 52px;
+}
+
+/* Background image — starts scaled up, zooms out on hover */
+.cardBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.08);
+  opacity: 0;
+  transition:
+    transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.55s ease;
+  will-change: transform, opacity;
+}
+
+.card:hover .cardBg {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Dark overlay — fades in with image */
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(12, 26, 45, 0.80) 0%,
+    rgba(0, 0, 0, 0.72) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.55s ease;
+}
+
+.card:hover .cardOverlay {
+  opacity: 1;
+}
+
+/* Content sits above image/overlay */
+.cardContent {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardId {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--navy);
+  transition: color 0.4s ease;
+}
+
+.card:hover .cardId {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.cardCategory {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  transition: color 0.4s ease;
+}
+
+.card:hover .cardCategory {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.cardTitle {
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  line-height: 1.15;
+  transition: color 0.4s ease;
+}
+
+.card:hover .cardTitle {
+  color: #ffffff;
+}
+
+.cardDescription {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray);
+  line-height: 1.75;
+  flex: 1;
+  transition: color 0.4s ease;
+}
+
+.card:hover .cardDescription {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.cardFooter {
+  margin-top: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.tag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: rgba(28, 53, 87, 0.06);
+  border: 1px solid rgba(28, 53, 87, 0.15);
+  padding: 4px 10px;
+  transition: color 0.4s ease, background 0.4s ease, border-color 0.4s ease;
+}
+
+.card:hover .tag {
+  color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.cardLink {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color 0.4s ease, gap 0.25s ease;
+}
+
+.card:hover .cardLink {
+  color: #ffffff;
+  gap: 12px;
+}
+
+.divider {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  height: 1px;
+  background: var(--border);
+}
+
+@media (max-width: 768px) {
+  .projects { padding: 100px 24px; }
+  .featuredGrid, .restGrid { grid-template-columns: 1fr; }
+  .header { flex-direction: column; gap: 12px; }
+}

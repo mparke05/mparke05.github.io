@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cmd.exe /c \"where npm node npx 2>nul\")",
+      "Bash(cmd.exe /c \"dir \"\"C:\\\\Program Files\\\\nodejs\"\" 2>nul & dir \"\"C:\\\\Program Files \\(x86\\)\\\\nodejs\"\" 2>nul & dir \"\"%APPDATA%\\\\npm\"\" 2>nul & reg query HKLM\\\\SOFTWARE\\\\Node.js 2>nul\")",
+      "Bash(cmd.exe /c \"dir C:\\\\Users\\\\matst\\\\AppData\\\\Roaming\\\\nvm 2>nul & dir C:\\\\nvm 2>nul & dir C:\\\\nodejs 2>nul & powershell -Command \"\"Get-Command node -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source\"\" 2>nul\")",
+      "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\")",
+      "Bash(npm install:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(grep -E \"\\\\.\\(png|jpg|jpeg|webp|PNG|JPG\\)$\")"
+    ]
+  }
+}
