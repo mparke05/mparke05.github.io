@@ -5,7 +5,7 @@ import styles from './TimelinePage.module.css'
 const events = [
   {
     date: 'August 2023',
-    title: 'Engineering Journey Begins',
+    title: 'Beginning of undergraduate studies',
     description: 'Enrolled at Villanova University in Mechanical Engineering with a thermal fluids concentration and aerospace minor.',
     tag: 'Milestone',
     slug: null,
@@ -160,10 +160,10 @@ export default function TimelinePage() {
 
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <p className={styles.heroLabel}>My Journey</p>
+          <p className={styles.heroLabel}>Timeline</p>
           <h1 className={styles.heroTitle}>
-            From student<br />
-            <span className={styles.heroAccent}>to engineer.</span>
+            Timeline<br />
+            
           </h1>
           <p className={styles.heroSub}>
             2023 — present &nbsp;·&nbsp; Drag or scroll to explore →
