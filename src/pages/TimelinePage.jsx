@@ -11,7 +11,7 @@ const events = [
     slug: null,
   },
   {
-    date: 'August 2024',
+    date: 'September 2024',
     title: 'Villanova Formula SAE — Drivetrain',
     description: 'Joined as a drivetrain member, leading design and manufacturing of the full drivetrain subsystem. Reduced rocker weight 14% via SolidWorks FEA.',
     tag: 'Competition',
@@ -162,8 +162,7 @@ export default function TimelinePage() {
         <div className={styles.heroInner}>
           <p className={styles.heroLabel}>Timeline</p>
           <h1 className={styles.heroTitle}>
-            Timeline<br />
-            
+            timeline.
           </h1>
           <p className={styles.heroSub}>
             2023 — present &nbsp;·&nbsp; Drag or scroll to explore →

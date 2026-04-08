@@ -10,7 +10,7 @@ export const projects = [
     featured: true,
     highlights: [
       { metric: 'Solo', label: 'End-to-end design & build' },
-      { metric: '70+', label: 'Components designed and/or integrated' },
+      { metric: '80+', label: 'Components designed and/or integrated' },
       { metric: 'RTX', label: 'Collaboration Award recipient' },
     ],
     overview: `During my Additive Manufacturing R&D internship at RTX (East Hartford, CT, Summer 2025), I was tasked as a solo engineer to solve a persistent measurement challenge inside laser powder bed fusion (LPBF) machines: accurately characterizing gas flow across the build volume under tight spatial constraints.`,
