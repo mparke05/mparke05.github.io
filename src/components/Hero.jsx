@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './Hero.module.css'
 
 const accolades = [
@@ -24,7 +24,7 @@ const accolades = [
 export default function Hero() {
   const [idx,  setIdx]  = useState(0)
   const [show, setShow] = useState(true)
-  const videoRef = useRef(null)
+
 
   useEffect(() => {
     const loop = setInterval(() => {
@@ -42,11 +42,9 @@ export default function Hero() {
   return (
     <section id="hero" className={styles.hero}>
       <video
-        ref={videoRef}
         className={styles.video}
         src="/hero.mp4"
         autoPlay muted loop playsInline
-        onCanPlay={() => { if (videoRef.current) videoRef.current.playbackRate = 0.75 }}
       />
       <div className={styles.overlay} />
 
