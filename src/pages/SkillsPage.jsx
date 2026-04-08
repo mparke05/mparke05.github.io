@@ -58,8 +58,7 @@ export default function SkillsPage() {
         <div className={styles.heroInner}>
           <p className={styles.heroLabel}>Skills & Expertise</p>
           <h1 className={styles.heroTitle}>
-            Technical<br />
-            <span className={styles.heroAccent}>Capabilities.</span>
+            skills.<br />
           </h1>
           <p className={styles.heroSub}>
              Throughout my engineering career, I've garnered skills through years of cross-system FSAE project work and fast-paced R&D work at the largest defense company in the world.

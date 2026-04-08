@@ -116,23 +116,23 @@ export const projects = [
     tags: ['CFD', 'SolidWorks Thermal', 'Heat Transfer', 'MATLAB'],
     featured: true,
     highlights: [
-      { metric: 'TBD', label: 'impedance reduction at identical flow rate' },
-      { metric: 'TBD', label: 'Placeholder metric — eddit in projects.js' },
-      { metric: 'TBD', label: 'Placeholder metric — edit in projects.js' },
+      { metric: 'End-to-End', label: 'thermal and hydraulic solver developed' },
+      { metric: 'Parametric Optimization', label: 'between cooling capacity and loop impedance' },
+      { metric: '18-server', label: 'NVIDIA GB200 NVL72 configuration' },
     ],
-    overview: `[Placeholder — edit this in src/data/projects.js] This project focused on modeling the thermal and fluid dynamics of a GPU rack cooling system. Starting from component-level heat loads, a full rack CFD model was constructed to evaluate airflow distribution, identify thermal bottlenecks, and optimize cooling architecture for high-density compute environments.`,
+    overview: `This project involved the development of a thermal and hydraulic model for an NVIDIA GB200 NVL72 GPU liquid cooling system, with the solver incorporating everything from the custom cold plates to the CDU heat exchanger design.`,
     sections: [
       {
         heading: 'Problem & Motivation',
-        body: `[Placeholder — edit this in src/data/projects.js] High-density GPU racks present significant thermal management challenges. Concentrated heat loads, constrained airflow paths, and recirculation zones can lead to hotspots that throttle performance or cause hardware failure. This project aimed to characterize those dynamics through simulation before physical implementation.`,
+        body: `In today's ever-growing demand for high performance computing, thermal engineers face the challenge of efficiently cooling high-power electronic components within tight spatial constraints and at a low long-term cost. This project aimed to model the thermal and fluid behavior of a high-density GPU rack cooling system, analyzing flow distribution, heat dissipation, and hydraulic penalties across multiple rack configurations to inform design decisions for optimal and efficient performance.`,
       },
       {
         heading: 'Modeling Approach',
-        body: `[Placeholder — edit this in src/data/projects.js] A full 3D thermal model of the rack was built, incorporating realistic component heat loads, fan curves, and ducting geometry. CFD analysis was performed to map velocity and temperature distributions throughout the enclosure, with particular focus on inlet/outlet conditions and inter-component interference.`,
+        body: `The MATLAB solver began at the cold plate level, where cold plates were optimized to maintain a maximum GPU lid temperature at a minimum pressure loss. The model then scaled to the server level, where piping configurations were evaluated based on flow distribution and hydraulic impedance. All components were modeled with realistic loss coefficients derived from empirical data. Finally, the model scaled to the rack level, where the intake and exhaust manifolds were designed alongside a CDU (coolant distribution unit) and buffer tank to complete the loop.`,
       },
       {
         heading: 'Results & Findings',
-        body: `[Placeholder — edit this in src/data/projects.js] Simulation results identified key recirculation zones and thermal hotspots within the rack. Configuration changes informed by the model produced meaningful improvements in temperature uniformity across the GPU array. Quantitative results and specific outcomes to be filled in here.`,
+        body: `As Dr. Alfonso Ortega would say during lecture, there's "no free lunch" in thermal systems design. Improving thermal performance is always accompanied by a hydraulic penalty, and this project quantified that tradeoff across hundreds of design iterations. The final design achieved the target GPU lid temperatures while maintaining feasibility in terms of pump requirements and overall system cost, including a full bill of materials and considerations for facility water chilling costs.`,
       },
     ],
   },
@@ -146,9 +146,9 @@ export const projects = [
     tags: ['Composites', 'Manufacturing', 'Materials'],
     featured: true,
     highlights: [
-      { metric: 'TBD', label: 'Placeholder metric — edit in projects.js' },
-      { metric: 'TBD', label: 'Placeholder metric — edit in projects.js' },
-      { metric: 'TBD', label: 'Placeholder metric — edit in projects.js' },
+      { metric: '20+', label: 'CF layups completed' },
+      { metric: 'end-to-end', label: 'ownership from setup to post-processing' },
+      { metric: '3', label: 'unique molding techniques explored'},
     ],
     overview: `[Placeholder — edit this in src/data/projects.js] This project covered the design, manufacturing, and mechanical evaluation of fiber composite structures. Working with woven and unidirectional fiber systems, the work explored how layup schedule, fiber orientation, and cure parameters affect the structural performance of finished laminates.`,
     sections: [
