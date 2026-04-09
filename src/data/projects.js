@@ -147,7 +147,7 @@ export const projects = [
     title: 'Fiber Composites Manufacturing',
     category: 'Manufacturing — Composite Structures',
     description:
-      'Hands-on design and fabrication of fiber composite structures, exploring layup techniques, cure processes, and structural performance.',
+      'Design and fabrication of fiber composite structures, exploring layup techniques, cure processes, and structural performance.',
     tags: ['Composites', 'Manufacturing', 'Materials'],
     featured: true,
     highlights: [
@@ -155,19 +155,25 @@ export const projects = [
       { metric: 'end-to-end', label: 'ownership from setup to post-processing' },
       { metric: '3', label: 'unique molding techniques explored'},
     ],
+    gallery: [
+      '/images/Fiber-Composites/IMG_5996.jpg',
+      '/images/Fiber-Composites/IMG_6007.jpg',
+      '/images/Fiber-Composites/IMG_6008.jpg',
+      '/images/Fiber-Composites/IMG_6014.jpg',
+    ],
     overview: `[Placeholder — edit this in src/data/projects.js] This project covered the design, manufacturing, and mechanical evaluation of fiber composite structures. Working with woven and unidirectional fiber systems, the work explored how layup schedule, fiber orientation, and cure parameters affect the structural performance of finished laminates.`,
     sections: [
       {
         heading: 'Materials & Layup',
-        body: `[Placeholder — edit this in src/data/projects.js] Fiber selection, resin systems, and layup sequence were determined based on structural requirements and manufacturing constraints. Multiple layup schedules were evaluated, with attention to fiber orientation angles and ply counts needed to achieve target stiffness and strength properties.`,
+        body: `Fiber ply count, weave orientation, resin system, and layup technique were determined based on manufacturing constraints, such as mold geometry, surface finish requirements, and available tools.`,
       },
       {
         heading: 'Manufacturing Process',
-        body: `[Placeholder — edit this in src/data/projects.js] Parts were fabricated using [wet layup / vacuum infusion / prepreg — edit as appropriate] and cured under controlled temperature and pressure conditions. Process parameters including cure cycle, vacuum integrity, and consolidation pressure were monitored throughout to ensure consistent laminate quality.`,
+        body: `As part of the development of the VU17 aerodynamics package, the composite elements were made using both resin lamination and vacuum infusion techniques under vacuum. Process parameters include resin recipe, cure time, vacuum integrity, and release agents (PVA, caranuba wax).`,
       },
       {
-        heading: 'Testing & Analysis',
-        body: `[Placeholder — edit this in src/data/projects.js] Finished specimens were evaluated through mechanical testing to characterize stiffness, strength, and failure modes. Results were compared against classical laminate theory predictions to assess the accuracy of the analytical models and the consistency of the manufacturing process.`,
+        heading: 'Post-Processing and Evaluation',
+        body: `I've performed various post processing techniques on finished composite parts, such as trimming, sanding, drilling, and coating. Structural performance of each element was validated during the physical testing of the package, where the package experienced testing hours on VU17.`,
       },
     ],
   },
