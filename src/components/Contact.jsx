@@ -26,9 +26,7 @@ export default function Contact() {
         <div className={styles.left}>
           <p className={styles.sectionLabel}>Contact</p>
           <h2 className={styles.heading}>
-            Let's build<br />
-            something<br />
-            <span className={styles.accent}>remarkable.</span>
+            let's connect.<br />
           </h2>
           <p className={styles.body}>
             I'm always open to new opportunities. If you have an opportunity in mind, I'd love to connect.
