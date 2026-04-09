@@ -161,7 +161,7 @@ export const projects = [
       '/images/Fiber-Composites/IMG_6008.jpg',
       '/images/Fiber-Composites/IMG_6014.jpg',
     ],
-    overview: `[Placeholder — edit this in src/data/projects.js] This project covered the design, manufacturing, and mechanical evaluation of fiber composite structures. Working with woven and unidirectional fiber systems, the work explored how layup schedule, fiber orientation, and cure parameters affect the structural performance of finished laminates.`,
+    overview: `My work with fiber composites manufacturing spans the entire setup and fabrication process. Currently, in preparation for my aerodynamics capstone project, I'm learning advanced mold manufacturing techniques, like milling MDF molds and 3D printing complex mold geometries.`,
     sections: [
       {
         heading: 'Materials & Layup',
@@ -190,6 +190,10 @@ export const projects = [
       { metric: 'CFD', label: 'Full-vehicle external aero simulation' },
       { metric: 'L/D', label: 'Lift-to-drag ratio optimization' },
       { metric: 'VU17', label: 'Villanova FSAE competition vehicle' },
+    ],
+    gallery: [
+      '/images/Aerodynamics/fullcarCFD.jpg',
+      '/images/Aerodynamics/fullcarCFD2.jpg',
     ],
     overview: `As part of the Villanova Formula SAE team, I performed full-vehicle external aerodynamics analysis using ANSYS Fluent on the VU17 competition car. The goal was to simulate real on-track airflow conditions and evaluate the effectiveness of the aero package — quantifying downforce and drag contributions across the car's geometry to guide design decisions.`,
     sections: [
