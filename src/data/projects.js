@@ -46,14 +46,14 @@ export const projects = [
     overview: `As Drivetrain member for Villanova Formula SAE, I have ownership of the design, manufacturing, and implementation of various drivetrain elements for our competition vehicle.`,
     galleryFeatured: '/images/Drivetrain/RENDEREXPLODE.png',
     gallery: [
-      { src: '/images/Drivetrain/iter1.png',        caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/Drivetrain/iter2.png',        caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/Drivetrain/iter3.png',        caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/Drivetrain/iter4.png',        caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/Drivetrain/iter4.5.jpg',      caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/Drivetrain/iter5.jpg',        caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/Drivetrain/finalrender.png',  caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/Drivetrain/finaldrives.jpg',  caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Drivetrain/iter1.png',        caption: 'Iteration 1' },
+      { src: '/images/Drivetrain/iter2.png',        caption: 'Iteration 2' },
+      { src: '/images/Drivetrain/iter3.png',        caption: 'Iteration 3' },
+      { src: '/images/Drivetrain/iter4.png',        caption: 'Iteration 4' },
+      { src: '/images/Drivetrain/iter4.5.jpg',      caption: 'Iteration 4.5' },
+      { src: '/images/Drivetrain/iter5.jpg',        caption: 'Iteration 5' },
+      { src: '/images/Drivetrain/finalrender.png',  caption: 'Final Render' },
+      { src: '/images/Drivetrain/finaldrives.jpg',  caption: 'Final drive ratio competition performance matrix.' },
     ],
     sections: [
       {
@@ -86,10 +86,10 @@ export const projects = [
     ],
     overview: `This project (November 2025) applied computational fluid dynamics and heat transfer simulation to a practical problem: cold hands during winter cycling. Starting from first principles, I built a full CFD model of airflow and convective heat loss around a cyclist's hands, then designed and validated a windshield to mitigate it.`,
     gallery: [
-      { src: '/images/CFDWindshield/flow10.png', caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/CFDWindshield/flow20.png', caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/CFDWindshield/heat10.png', caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/CFDWindshield/heat20.png', caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/CFDWindshield/flow10.png', caption: 'Flow visualization of 10mph biking conditions.' },
+      { src: '/images/CFDWindshield/flow20.png', caption: 'Flow visualization of 20mph biking conditions.' },
+      { src: '/images/CFDWindshield/heat10.png', caption: 'Steady-state thermal simulation of 10mph biking conditions.' },
+      { src: '/images/CFDWindshield/heat20.png', caption: 'Steady-state thermal simulation of 20mph biking conditions.' },
     ],
     sections: [
       {
@@ -122,9 +122,9 @@ export const projects = [
     ],
     overview: `This project involved the development of a thermal and hydraulic model for an NVIDIA GB200 NVL72 GPU liquid cooling system, with the solver incorporating everything from the custom cold plates to the CDU heat exchanger design.`,
     gallery: [
-      { src: '/images/Cooling Rack/optigraph.jpg', caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/Cooling Rack/optimize.jpg',  caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/Cooling Rack/percent.jpg',   caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Cooling Rack/optigraph.jpg', caption: 'Visualized optimization results of lid temperature based on pin count and pin thickness within a size constraint. ' },
+      { src: '/images/Cooling Rack/optimize.jpg',  caption: 'Carpet plot outlining the pressure loss given a plate gap and plate count for a brazed-plate heat exchanger.' },
+      { src: '/images/Cooling Rack/percent.jpg',   caption: 'Percentage of total pressure drop by component for an 8-GPU server loop.' },
     ],
     sections: [
       {
@@ -156,10 +156,10 @@ export const projects = [
       { metric: '3', label: 'unique molding techniques explored'},
     ],
     gallery: [
-      { src: '/images/Fiber-Composites/IMG_5996.jpg', caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/Fiber-Composites/IMG_6007.jpg', caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/Fiber-Composites/IMG_6008.jpg', caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/Fiber-Composites/IMG_6014.jpg', caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Fiber-Composites/IMG_5996.jpg', caption: 'Uncut blue carbon sidepod with surface resin finish.' },
+      { src: '/images/Fiber-Composites/IMG_6007.jpg', caption: 'Curved front-wing airfoil vacuum layup.' },
+      { src: '/images/Fiber-Composites/IMG_6008.jpg', caption: 'Another curved front-wing airfoil vacuum layup.' },
+      { src: '/images/Fiber-Composites/IMG_6014.jpg', caption: 'Photo of me processing a blue carbon sidepod.' },
     ],
     overview: `My work with fiber composites manufacturing spans the entire setup and fabrication process. Currently, in preparation for my aerodynamics capstone project, I'm learning advanced mold manufacturing techniques, like milling MDF molds and 3D printing complex mold geometries.`,
     sections: [
@@ -192,8 +192,8 @@ export const projects = [
       { metric: 'VU17', label: 'Villanova FSAE competition vehicle' },
     ],
     gallery: [
-      { src: '/images/Aerodynamics/fullcarCFD.jpg',  caption: 'Placeholder caption — edit in src/data/projects.js' },
-      { src: '/images/Aerodynamics/fullcarCFD2.jpg', caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Aerodynamics/fullcarCFD.jpg',  caption: 'Particle pathlines of full-vehicle external aero CFD.' },
+      { src: '/images/Aerodynamics/fullcarCFD2.jpg', caption: 'Velocity vectors of full-vehicle external aero CFD.' },
     ],
     overview: `As part of the Villanova Formula SAE team, I performed full-vehicle external aerodynamics analysis using ANSYS Fluent on the VU17 competition car. The goal was to simulate real on-track airflow conditions and evaluate the effectiveness of the aero package — quantifying downforce and drag contributions across the car's geometry to guide design decisions.`,
     sections: [
