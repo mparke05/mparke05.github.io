@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { projects } from '../data/projects'
 import { useReveal } from '../hooks/useReveal'
 import styles from './ProjectPage.module.css'
@@ -163,8 +164,8 @@ export default function ProjectPage() {
         </div>
       </nav>
 
-      {/* Lightbox */}
-      {lightbox && (
+      {/* Lightbox — rendered via portal directly on body to avoid fixed positioning issues */}
+      {lightbox && createPortal(
         <div className={styles.lightboxBackdrop} onClick={() => setLightbox(null)}>
           <button className={styles.lightboxClose} onClick={() => setLightbox(null)}>✕</button>
           <img
@@ -173,7 +174,8 @@ export default function ProjectPage() {
             className={styles.lightboxImg}
             onClick={(e) => e.stopPropagation()}
           />
-        </div>
+        </div>,
+        document.body
       )}
 
       <footer className={styles.footer}>
