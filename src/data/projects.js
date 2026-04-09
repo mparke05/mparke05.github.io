@@ -122,7 +122,6 @@ export const projects = [
     ],
     overview: `This project involved the development of a thermal and hydraulic model for an NVIDIA GB200 NVL72 GPU liquid cooling system, with the solver incorporating everything from the custom cold plates to the CDU heat exchanger design.`,
     gallery: [
-      '/images/Cooling Rack/PID.jpg',
       '/images/Cooling Rack/optigraph.jpg',
       '/images/Cooling Rack/optimize.jpg',
       '/images/Cooling Rack/percent.jpg',
