@@ -46,14 +46,14 @@ export const projects = [
     overview: `As Drivetrain member for Villanova Formula SAE, I have ownership of the design, manufacturing, and implementation of various drivetrain elements for our competition vehicle.`,
     galleryFeatured: '/images/Drivetrain/RENDEREXPLODE.png',
     gallery: [
-      '/images/Drivetrain/iter1.png',
-      '/images/Drivetrain/iter2.png',
-      '/images/Drivetrain/iter3.png',
-      '/images/Drivetrain/iter4.png',
-      '/images/Drivetrain/iter4.5.jpg',
-      '/images/Drivetrain/iter5.jpg',
-      '/images/Drivetrain/finalrender.png',
-      '/images/Drivetrain/finaldrives.jpg',
+      { src: '/images/Drivetrain/iter1.png',        caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Drivetrain/iter2.png',        caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Drivetrain/iter3.png',        caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Drivetrain/iter4.png',        caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Drivetrain/iter4.5.jpg',      caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Drivetrain/iter5.jpg',        caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Drivetrain/finalrender.png',  caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Drivetrain/finaldrives.jpg',  caption: 'Placeholder caption — edit in src/data/projects.js' },
     ],
     sections: [
       {
@@ -86,10 +86,10 @@ export const projects = [
     ],
     overview: `This project (November 2025) applied computational fluid dynamics and heat transfer simulation to a practical problem: cold hands during winter cycling. Starting from first principles, I built a full CFD model of airflow and convective heat loss around a cyclist's hands, then designed and validated a windshield to mitigate it.`,
     gallery: [
-      '/images/CFDWindshield/flow10.png',
-      '/images/CFDWindshield/flow20.png',
-      '/images/CFDWindshield/heat10.png',
-      '/images/CFDWindshield/heat20.png',
+      { src: '/images/CFDWindshield/flow10.png', caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/CFDWindshield/flow20.png', caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/CFDWindshield/heat10.png', caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/CFDWindshield/heat20.png', caption: 'Placeholder caption — edit in src/data/projects.js' },
     ],
     sections: [
       {
@@ -122,9 +122,9 @@ export const projects = [
     ],
     overview: `This project involved the development of a thermal and hydraulic model for an NVIDIA GB200 NVL72 GPU liquid cooling system, with the solver incorporating everything from the custom cold plates to the CDU heat exchanger design.`,
     gallery: [
-      '/images/Cooling Rack/optigraph.jpg',
-      '/images/Cooling Rack/optimize.jpg',
-      '/images/Cooling Rack/percent.jpg',
+      { src: '/images/Cooling Rack/optigraph.jpg', caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Cooling Rack/optimize.jpg',  caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Cooling Rack/percent.jpg',   caption: 'Placeholder caption — edit in src/data/projects.js' },
     ],
     sections: [
       {
@@ -156,10 +156,10 @@ export const projects = [
       { metric: '3', label: 'unique molding techniques explored'},
     ],
     gallery: [
-      '/images/Fiber-Composites/IMG_5996.jpg',
-      '/images/Fiber-Composites/IMG_6007.jpg',
-      '/images/Fiber-Composites/IMG_6008.jpg',
-      '/images/Fiber-Composites/IMG_6014.jpg',
+      { src: '/images/Fiber-Composites/IMG_5996.jpg', caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Fiber-Composites/IMG_6007.jpg', caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Fiber-Composites/IMG_6008.jpg', caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Fiber-Composites/IMG_6014.jpg', caption: 'Placeholder caption — edit in src/data/projects.js' },
     ],
     overview: `My work with fiber composites manufacturing spans the entire setup and fabrication process. Currently, in preparation for my aerodynamics capstone project, I'm learning advanced mold manufacturing techniques, like milling MDF molds and 3D printing complex mold geometries.`,
     sections: [
@@ -192,8 +192,8 @@ export const projects = [
       { metric: 'VU17', label: 'Villanova FSAE competition vehicle' },
     ],
     gallery: [
-      '/images/Aerodynamics/fullcarCFD.jpg',
-      '/images/Aerodynamics/fullcarCFD2.jpg',
+      { src: '/images/Aerodynamics/fullcarCFD.jpg',  caption: 'Placeholder caption — edit in src/data/projects.js' },
+      { src: '/images/Aerodynamics/fullcarCFD2.jpg', caption: 'Placeholder caption — edit in src/data/projects.js' },
     ],
     overview: `As part of the Villanova Formula SAE team, I performed full-vehicle external aerodynamics analysis using ANSYS Fluent on the VU17 competition car. The goal was to simulate real on-track airflow conditions and evaluate the effectiveness of the aero package — quantifying downforce and drag contributions across the car's geometry to guide design decisions.`,
     sections: [

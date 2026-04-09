@@ -124,8 +124,11 @@ export default function ProjectPage() {
               {(project.galleryFeatured
                 ? [...project.gallery.slice(0, 4), project.galleryFeatured, ...project.gallery.slice(4)]
                 : project.gallery
-              ).map((src, i) => {
+              ).map((item, i) => {
                 const isFeatured = project.galleryFeatured && i === 4
+                // Support both plain string paths (galleryFeatured) and { src, caption } objects
+                const src     = typeof item === 'string' ? item : item.src
+                const caption = typeof item === 'string' ? null  : item.caption
                 return (
                   <div
                     key={i}
@@ -134,10 +137,13 @@ export default function ProjectPage() {
                   >
                     <img
                       src={src}
-                      alt={`Project photo ${i + 1}`}
+                      alt={caption || `Project photo ${i + 1}`}
                       className={styles.galleryImg}
                       draggable="false"
                     />
+                    {caption && (
+                      <div className={styles.galleryCaption}>{caption}</div>
+                    )}
                   </div>
                 )
               })}
