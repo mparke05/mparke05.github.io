@@ -8,7 +8,7 @@ const heroImages = {
   'formula-sae-drivetrain': '/images/tuff.jpg',
   'fsae-aerodynamics':      '/images/VU17_OrthoView.png',
   'cfd-bike-windshield':    '/images/fluidLR_vector1.5.png',
-  'gpu-rack-cooling':       '/images/PID.jpg',
+  'gpu-rack-cooling':       '/images/Cooling Rack/PID.jpg',
   'fiber-composites':       '/images/composites.jpg',
 }
 
