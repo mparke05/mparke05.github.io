@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import { projects } from '../data/projects'
 import { useReveal } from '../hooks/useReveal'
 import styles from './ProjectPage.module.css'
@@ -34,6 +35,15 @@ export default function ProjectPage() {
   const currentIndex = projects.indexOf(project)
   const prev = projects[currentIndex - 1] ?? null
   const next = projects[currentIndex + 1] ?? null
+
+  const [lightbox, setLightbox] = useState(null)
+
+  useEffect(() => {
+    if (!lightbox) return
+    const onKey = (e) => { if (e.key === 'Escape') setLightbox(null) }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [lightbox])
 
   return (
     <div className={styles.page}>
@@ -119,6 +129,7 @@ export default function ProjectPage() {
                   <div
                     key={i}
                     className={`${styles.galleryCell} ${isFeatured ? styles.galleryCellFeatured : ''}`}
+                    onClick={() => setLightbox(src)}
                   >
                     <img
                       src={src}
@@ -151,6 +162,19 @@ export default function ProjectPage() {
           ) : <div />}
         </div>
       </nav>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div className={styles.lightboxBackdrop} onClick={() => setLightbox(null)}>
+          <button className={styles.lightboxClose} onClick={() => setLightbox(null)}>✕</button>
+          <img
+            src={lightbox}
+            alt="Full size"
+            className={styles.lightboxImg}
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
 
       <footer className={styles.footer}>
         <Link to="/" className={styles.footerBack}>← Return to Portfolio</Link>
