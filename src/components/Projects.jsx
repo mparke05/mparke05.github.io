@@ -6,7 +6,7 @@ import styles from './Projects.module.css'
 const cardImages = {
   'gas-flow-robot':          '/images/hmd.jpg',
   'formula-sae-drivetrain':  '/images/VU17_TopDownView.png',
-  'cfd-bike-windshield':     '/images/fsae5.jpg',
+  'cfd-bike-windshield':     '/images/CFDWindshield/flow10.png',
   'fsae-aerodynamics':       '/images/VU17_TopDownView.png',
   'gpu-rack-cooling':        '/images/PID.jpg',
   'fiber-composites':        '/images/composites.jpg',
