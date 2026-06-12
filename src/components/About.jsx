@@ -31,7 +31,7 @@ export default function About() {
           </h2>
           <p className={styles.body}>
             I'm a junior Mechanical Engineering student at Villanova University (Class of 2027)
-            with a concentration in Thermal Fluids and an Aerospace minor. I hold a 3.86 GPA.
+            with a concentration in Thermal Fluids and an Aerospace minor. I hold a 3.9 GPA.
           </p>
           <p className={styles.body}>
             My experience spans hands-on hardware development at RTX, where I built an

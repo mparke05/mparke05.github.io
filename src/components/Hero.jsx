@@ -109,7 +109,7 @@ export default function Hero() {
 
       <div className={styles.statsRow}>
         {[
-          { value: '3.86',            label: 'GPA · Dean\'s List' },
+          { value: '3.9',             label: 'GPA · Dean\'s List' },
           { value: 'RTX',             label: 'Summer 2025 Intern' },
           { value: 'LMT',             label: 'Summer 2026 Intern' },
         ].map(({ value, label }) => (
