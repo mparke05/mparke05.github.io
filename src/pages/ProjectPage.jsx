@@ -78,6 +78,13 @@ export default function ProjectPage() {
         </div>
       </section>
 
+      {/* Export-control / proprietary notice */}
+      {project.notice && (
+        <div className={styles.noticeBanner}>
+          <p className={styles.noticeText}>{project.notice}</p>
+        </div>
+      )}
+
       {/* Highlights */}
       <RevealSection>
         <section className={styles.highlights}>
@@ -103,11 +110,18 @@ export default function ProjectPage() {
           </RevealSection>
 
           <div className={styles.sections}>
-            {project.sections.map(({ heading, body }, i) => (
+            {project.sections.map(({ heading, body, bullets }, i) => (
               <RevealSection key={heading} delay={i * 70}>
                 <div className={styles.section}>
                   <h2 className={styles.sectionHeading}>{heading}</h2>
                   <p className={styles.sectionBody}>{body}</p>
+                  {bullets && (
+                    <ul className={styles.sectionList}>
+                      {bullets.map((item) => (
+                        <li key={item} className={styles.sectionListItem}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </RevealSection>
             ))}

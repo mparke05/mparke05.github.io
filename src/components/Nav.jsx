@@ -8,7 +8,7 @@ export default function Nav() {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const dropdownRef = useRef(null)
   const location = useLocation()
-  const isProjectPage = location.pathname.startsWith('/projects/') || location.pathname === '/skills' || location.pathname === '/timeline'
+  const isProjectPage = location.pathname.startsWith('/projects/')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -35,9 +35,7 @@ export default function Nav() {
   return (
     <nav className={`${styles.nav} ${scrolled || isProjectPage ? styles.scrolled : ''}`}>
       <Link to="/" className={styles.logo}>
-        <span className={styles.logoAccent}>{'<'}</span>
         MMP
-        <span className={styles.logoAccent}>{'/>'}</span>
       </Link>
 
       <ul className={styles.links}>
@@ -87,14 +85,6 @@ export default function Nav() {
               ))}
             </div>
           )}
-        </li>
-
-        <li>
-          <Link to="/skills" className={styles.link}>Skills</Link>
-        </li>
-
-        <li>
-          <Link to="/timeline" className={styles.link}>Timeline</Link>
         </li>
 
         <li>

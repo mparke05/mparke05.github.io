@@ -4,6 +4,7 @@ export const projects = [
     slug: 'gas-flow-robot',
     title: 'Automated Gas Flow Robot',
     category: 'RTX — Additive Manufacturing R&D',
+    notice: 'Due to export control regulations and preservation of RTX proprietary information, pictures and specific technical details regarding the project are unavailable.',
     description:
       'Solo-designed and manufactured a robot to measure gas flow inside metal additive (LPBF) machines under heavy spatial constraints, integrating custom sensors and actuation devices. Supported aerospace-grade qualification and root-cause analysis across multiple machines. Received an RTX Collaboration Award.',
     tags: ['LPBF', 'Mechatronics', 'SolidWorks', '3D Printing'],
@@ -21,7 +22,15 @@ export const projects = [
       },
       {
         heading: 'Design & Build',
-        body: `I designed and manufactured a custom robot from scratch, integrating multiple sensor types and custom actuation mechanisms within the tight internal geometry of the machine. Over 20 unique 3D-printed components were designed specifically for this system. The design had to be compact enough to deploy inside active machines while rigid enough to produce repeatable, trustworthy measurements.`,
+        body: `I designed and manufactured a custom robot from scratch, integrating multiple sensor types and custom actuation mechanisms within the tight internal geometry of the machine. Over 20 unique 3D-printed components were designed specifically for this system. The design had to be compact enough to deploy inside active machines while rigid enough to produce repeatable, trustworthy measurements. I owned all decisions for every component of the project, including:`,
+        bullets: [
+          'Structural design',
+          'Method(s) of actuation and kinematic coordinate system',
+          'Sensor integration',
+          'Actuator integration',
+          'Software regarding robot programming and data collection',
+          'Testing, iteration, and validation',
+        ],
       },
       {
         heading: 'Testing & Impact',
@@ -35,15 +44,15 @@ export const projects = [
     title: 'Formula SAE Drivetrain',
     category: 'Villanova Formula SAE — Drivetrain Lead',
     description:
-      'I have owernship of the design, simulation, and manufacturing of various drivetrain elements for our competition vehicle. This includes two sizes of the differential sprocket. Additionally, I worked to determine an optimal final drive ratio for the car by using a point-mass laptime simulation and a decision matrix that weighed the projected gained/lost points across different dynamic events. ',
+      'I have owernship of the design, simulation, and manufacturing of various drivetrain elements for our competition vehicle. This includes two sizes of the differential sprocket. Additionally, I performed static load testing to physically validate simulated factors of safety for differential mounting components. ',
     tags: ['SolidWorks FEA', 'Ansys Mechanical', 'CAD', 'GD&T'],
     featured: true,
     highlights: [
       { metric: '15', label: 'Sprocket Iterations' },
-      { metric: '19%', label: 'Diff sprocket weight reduction' },
+      { metric: '8%', label: 'Diff sprocket weight reduction' },
       { metric: '450g', label: 'Total system weight reduction' },
     ],
-    overview: `As Drivetrain member for Villanova Formula SAE, I have ownership of the design, manufacturing, and implementation of various drivetrain elements for our competition vehicle.`,
+    overview: `As a drivetrain member for Villanova Formula SAE, I have ownership of the design, manufacturing, and implementation of various drivetrain elements for our competition car.`,
     galleryFeatured: '/images/Drivetrain/RENDEREXPLODE.png',
     gallery: [
       { src: '/images/Drivetrain/iter1.png',        caption: 'Iteration 1' },
@@ -54,19 +63,22 @@ export const projects = [
       { src: '/images/Drivetrain/iter5.jpg',        caption: 'Iteration 5' },
       { src: '/images/Drivetrain/finalrender.png',  caption: 'Final Render' },
       { src: '/images/Drivetrain/finaldrives.jpg',  caption: 'Final drive ratio competition performance matrix.' },
+      { src: '/images/Drivetrain/turnbuckle.jpeg',  caption: 'Setup of turnbuckle static load testing' },
+      { src: '/images/Drivetrain/chart.jpeg',       caption: 'Force over displacement graph of turnbuckle loading' },
+      { src: '/images/Drivetrain/physicalbuild.jpeg', caption: 'Manufactured and anodized final sprocket, 40 teeth.' },
     ],
     sections: [
       {
-        heading: 'Chassis Rocker Optimization',
-        body: `Using SolidWorks FEA, I analyzed stress distributions in the force-distributing chassis rocker under realistic load cases. Through iterative topology-informed redesign — removing material from low-stress regions while preserving critical load paths — I achieved a 14% weight reduction without compromising structural integrity.`,
+        heading: 'Turnbuckle static load testing',
+        body: `Due to uncertainties with FEA simulations for the turnbuckle assembly, I decided it was necessary to perform physical testing to validate the safety of the proposed turnbuckle design. I used an Instron testing machine to apply an increasing static load, measuring the deflection under load and ultimate buckling point. The results showed a factor of safety of roughly 2.7, which validated the questionable FEA result of 2.5.`,
       },
       {
         heading: 'Rear Sprocket Redesign',
-        body: `I performed a full FEA study of the drivetrain rear sprocket using both SolidWorks and Ansys Mechanical, mapping stress concentrations under peak torque conditions. The redesigned sprocket geometry reduced mass by 8% while maintaining the required factor of safety, validated against the original loading cases.`,
+        body: `I performed a full FEA study of the drivetrain rear sprocket using both SolidWorks and Ansys Mechanical, determining factor of safety under maximum torque conditions. The redesigned sprocket geometry reduced mass by 8% while maintaining the required factor of safety. These results were validated through over 200 miles of physical testing on the car.`,
       },
       {
         heading: 'Technical Documentation',
-        body: `All drivetrain components I designed were documented with full technical drawings produced to ASME Y14.5 GD&T standards, ready for external manufacturing. This included tolerance stacks, datum references, and surface finish callouts appropriate for each fabrication method.`,
+        body: `All drivetrain components I designed were documented with full technical drawings produced to ASME Y14.5 GD&T standards, ready for external manufacturing.`,
       },
     ],
   },
@@ -112,7 +124,7 @@ export const projects = [
     title: 'GPU Rack Cooling System',
     category: 'Thermal Systems — CFD & Modeling',
     description:
-      'Modeled the thermal and fluid behavior of a high-density GPU rack cooling system. Analyzed airflow distribution, heat dissipation pathways, and cooling efficiency across multiple rack configurations.',
+      'Modeled the thermal and fluid behavior of a high-density GPU rack cooling system. Analyzed fluid distribution, heat dissipation pathways, and cooling efficiency across multiple rack configurations.',
     tags: ['CFD', 'SolidWorks Thermal', 'Heat Transfer', 'MATLAB'],
     featured: true,
     highlights: [
@@ -161,11 +173,11 @@ export const projects = [
       { src: '/images/Fiber-Composites/IMG_6008.jpg', caption: 'Another curved front-wing airfoil vacuum layup.' },
       { src: '/images/Fiber-Composites/IMG_6014.jpg', caption: 'Photo of me processing a blue carbon sidepod.' },
     ],
-    overview: `My work with fiber composites manufacturing spans the entire setup and fabrication process. Currently, in preparation for my aerodynamics capstone project, I'm learning advanced mold manufacturing techniques, like milling MDF molds and 3D printing complex mold geometries.`,
+    overview: `My work with fiber composites manufacturing spans the entire setup and fabrication processes. Currently, in preparation for my aerodynamics capstone project, I'm learning advanced mold manufacturing techniques, like milling MDF molds and 3D printing complex mold geometries.`,
     sections: [
       {
         heading: 'Materials & Layup',
-        body: `Fiber ply count, weave orientation, resin system, and layup technique were determined based on manufacturing constraints, such as mold geometry, surface finish requirements, and available tools.`,
+        body: `Fiber ply count, weave orientation, resin system, and layup technique were determined based on manufacturing constraints, such as mold geometry, mass budget constraints, and available tools.`,
       },
       {
         heading: 'Manufacturing Process',
@@ -188,7 +200,6 @@ export const projects = [
     featured: true,
     highlights: [
       { metric: 'CFD', label: 'Full-vehicle external aero simulation' },
-      { metric: 'L/D', label: 'Lift-to-drag ratio optimization' },
       { metric: 'VU17', label: 'Villanova FSAE competition vehicle' },
     ],
     gallery: [
@@ -199,7 +210,7 @@ export const projects = [
     sections: [
       {
         heading: 'CFD Setup & Meshing',
-        body: `A half-car geometry was meshed within Ansys Fluent meshing to create a watertight mesh. Boundary conditions were set to replicate on-track conditions at 50 mph, with the K-Omega SST turbulence model used to capture flow separation and wake behavior. Results were cross-validated against Siemens Star-CCM simulations to ensure consistency.`,
+        body: `A half-car geometry was meshed within Ansys Fluent meshing to create a watertight mesh. Boundary conditions were set to replicate on-track conditions at 50 mph, with the K-Omega SST turbulence model used to capture flow and wake behavior. Results were cross-checked against Siemens Star-CCM simulations to ensure consistency.`,
       },
       {
         heading: 'Aerodynamic Performance Analysis',

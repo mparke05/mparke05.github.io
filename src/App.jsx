@@ -5,10 +5,6 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import ProjectPage from './pages/ProjectPage'
-import SkillsPage from './pages/SkillsPage'
-import TimelinePage from './pages/TimelinePage'
-import ParallaxStrips from './components/ParallaxStrips'
-import CursorPixel from './components/CursorPixel'
 
 function Portfolio() {
   return (
@@ -32,8 +28,6 @@ function AnimatedRoutes() {
       <Routes>
         <Route path="/"                  element={<Portfolio />}   />
         <Route path="/projects/:slug"    element={<ProjectPage />} />
-        <Route path="/skills"            element={<SkillsPage />}   />
-        <Route path="/timeline"          element={<TimelinePage />} />
       </Routes>
     </div>
   )
@@ -42,8 +36,6 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <BrowserRouter>
-      <ParallaxStrips />
-      <CursorPixel />
       <AnimatedRoutes />
     </BrowserRouter>
   )

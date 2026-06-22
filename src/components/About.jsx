@@ -2,9 +2,9 @@ import { useReveal } from '../hooks/useReveal'
 import styles from './About.module.css'
 
 const skills = [
-  { category: 'CAD / Design', items: ['SolidWorks', 'Creo', 'SolidWorks FEA', 'nTop'] },
-  { category: 'Simulation', items: ['Ansys Fluent', 'Ansys Mechanical', 'SolidWorks Thermal', 'CFD / FEA'] },
-  { category: 'Programming', items: ['MATLAB', 'Python', 'C++ (exposure)', 'Materialise Magics'] },
+  { category: 'CAD / Design', items: ['SolidWorks', 'Creo', 'nTop - learning'] },
+  { category: 'Simulation', items: ['Ansys Fluent', 'Ansys Mechanical', 'SolidWorks Thermal', 'SolidWorks FEA'] },
+  { category: 'Programming', items: ['MATLAB', 'Python', 'Materialise Magics'] },
   { category: 'Manufacturing', items: ['LPBF Additive Mfg.', '3D Printing', 'Mechatronics', 'Prototyping'] },
 ]
 
@@ -30,7 +30,7 @@ export default function About() {
         
           </h2>
           <p className={styles.body}>
-            I'm a junior Mechanical Engineering student at Villanova University (Class of 2027)
+            I'm a senior Mechanical Engineering student at Villanova University (Class of 2027)
             with a concentration in Thermal Fluids and an Aerospace minor. I hold a 3.9 GPA.
           </p>
           <p className={styles.body}>
