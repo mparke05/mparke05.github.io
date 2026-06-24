@@ -89,7 +89,7 @@ export const projects = [
     category: 'Heat Transfer & CFD Simulation',
     description:
       'Used ANSYS Fluent to simulate heat transfer from hands during cold-weather cycling and optimized a custom windshield geometry that increased hand temperature by 11°C. Validated results with SolidWorks thermal simulations and real-world physical testing.',
-    tags: ['Ansys Fluent', 'CFD', 'SolidWorks Thermal', 'MATLAB'],
+    tags: ['Ansys Fluent', 'CFD', 'SolidWorks Thermal'],
     featured: true,
     highlights: [
       { metric: '+11°C', label: 'Steady-State Hand temperature increase' },
@@ -125,7 +125,7 @@ export const projects = [
     category: 'Thermal Systems — CFD & Modeling',
     description:
       'Modeled the thermal and fluid behavior of a high-density GPU rack cooling system. Analyzed fluid distribution, heat dissipation pathways, and cooling efficiency across multiple rack configurations.',
-    tags: ['CFD', 'SolidWorks Thermal', 'Heat Transfer', 'MATLAB'],
+    tags: ['Heat Transfer', 'MATLAB'],
     featured: true,
     highlights: [
       { metric: 'End-to-End', label: 'thermal and hydraulic solver developed' },
@@ -196,7 +196,7 @@ export const projects = [
     category: 'Villanova Formula SAE — Aero Package',
     description:
       'As a member of the Formula SAE senior capstone design team, I am spearheading the integration of nTop, a CAD-CFD platform, into the aerodynamics design process.',
-    tags: ['Ansys Fluent', 'CFD', 'SolidWorks', 'External Aero'],
+    tags: ['Ansys Fluent', 'CFD', 'External Aero'],
     featured: true,
     highlights: [
       { metric: 'CFD', label: 'Full-vehicle external aero simulation' },
