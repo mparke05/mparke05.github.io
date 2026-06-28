@@ -58,7 +58,7 @@ export const projects = [
     sections: [
       {
         heading: 'Design Goals',
-        body: `The goal of changing the final drive ratio this year was to maximize tractive force while keeping the engine within its power band across our typical operating range. Analysis showed that a 44 tooth sprocket delivered a torque that broke traction with the ground. Choosing 40 teeth for this year's sprocket reduced torque multiplication to match the traction limit and raised the RPM range relative to wheel speed across typical endurance speeds. In turn, the engine is closer to peak output power.\n\nThe final drive ratio was determined using a laptime simulator to maximize competition points. Tradeoffs included acceleration time, top speed, and fuel efficiency. A decision matrix was used to determine the maximum points gain/loss from each final drive ratio. The ideal 44T sprocket was unfeasible due to size constraints within the chassis, so 40T was selected as it was the closest candidate in performance—slightly slower acceleration but faster in endurance.`,
+        body: `The goal of changing the final drive ratio this year was to maximize tractive force while keeping the engine within its power band across our typical operating range. Analysis showed that a 44 tooth sprocket delivered a torque that broke traction with the ground. Choosing 40 teeth for this year's sprocket reduced torque multiplication to match the traction limit and raised the RPM range relative to wheel speed across typical endurance speeds. In turn, the engine is closer to peak output power.`,
         images: [
           { src: '/images/Drivetrain/optimumlap2.jpg' },
           { src: '/images/Drivetrain/44T dummy.jpg' },
