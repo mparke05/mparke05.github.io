@@ -44,7 +44,7 @@ export const projects = [
     title: 'Formula SAE Drivetrain',
     category: 'Villanova Formula SAE — Drivetrain Lead',
     description:
-      'I have owernship of the design, simulation, and manufacturing of various drivetrain elements for our competition vehicle. This includes two sizes of the differential sprocket. Additionally, I performed static load testing to physically validate simulated factors of safety for differential mounting components. ',
+      'I have owernship of the design, simulation, and validation of various drivetrain elements for our competition vehicle. This includes two sizes of the differential sprocket. Additionally, I performed static load testing to physically validate simulated factors of safety for differential mounting components. ',
     tags: ['SolidWorks FEA', 'Ansys Mechanical', 'CAD', 'GD&T'],
     featured: true,
     highlights: [
@@ -58,7 +58,7 @@ export const projects = [
     sections: [
       {
         heading: 'Design Goals',
-        body: `The goal of changing the final drive ratio this year was to maximize tractive force while keeping the engine within its power band across our typical operating range. Analysis showed that a 44 tooth sprocket delivered a torque that broke traction with the ground. Choosing 40 teeth for this year's sprocket reduced torque multiplication to match the traction limit and raised the RPM range relative to wheel speed across typical endurance speeds. In turn, the engine is closer to peak output power.`,
+        body: `The goal of changing the final drive ratio this year was to maximize tractive force while keeping the engine within its power band across our typical operating range. Although lap-time simulations predicted highest performance for a 44 tooth sprocket, further analysis showed that a 44 tooth sprocket delivered a torque that broke traction with the ground. Choosing 40 teeth for this year's sprocket reduced torque multiplication to match the traction limit and raised the RPM range relative to wheel speed across typical endurance speeds. In turn, the engine was closer to peak output power.`,
         images: [
           { src: '/images/Drivetrain/optimumlap2.jpg' },
           { src: '/images/Drivetrain/44T dummy.jpg' },
@@ -66,11 +66,11 @@ export const projects = [
       },
       {
         heading: 'Constraints',
-        body: `A larger sprocket combined with the smaller, confined chassis creates significant space issues. The larger sprocket also experiences a larger moment about the center, requiring critical factor of safety considerations. Moment equals torque multiplied by the final drive ratio and sprocket radius.`,
+        body: `A larger sprocket combined with the smaller, confined chassis created significant space issues. The larger sprocket also experiences a larger moment about the center, requiring critical factor of safety considerations. Above is an image of a dummy sprocket, sized to 44 Teeth, to determine if it would fit in the chassis and if it would create too sharp an angle for the halfshaft tripod bearings.`,
       },
       {
         heading: 'Original Design',
-        body: `The original design approach used patterned slots throughout the sprocket for weight reduction. Early iterations showed strong weight savings and good performance, but the designs were ultimately rejected due to design-for-manufacturing concerns.`,
+        body: `The original design approach used patterned slots throughout the sprocket for weight reduction. Early iterations showed strong weight savings and good performance, but the designs were ultimately rejected due to DFM concerns.`,
         images: [
           { src: '/images/Drivetrain/iter1.png' },
           { src: '/images/Drivetrain/iter2.png' },
@@ -80,11 +80,11 @@ export const projects = [
       },
       {
         heading: 'First Iterations & Analysis',
-        body: `Initial iterations performed well with strong weight savings, but manufacturability concerns made them infeasible. The complexity of the pattern geometry would create challenges in the machining and finishing processes.`,
+        body: `Initial iterations performed well with strong weight savings, but the same manufacturability concerns made them infeasible. The complexity of the pattern geometry would create challenges in the machining process.`,
       },
       {
         heading: 'Final Design',
-        body: `The final iterations incorporated feedback from manufacturing constraints, resulting in a simple, producible geometry. The mesh contained roughly 46,000 elements. Using both SolidWorks FEA and Ansys Mechanical, I determined a factor of safety of 2.56 at 393 grams. A zero-based fatigue life analysis was performed with a 1.25 scale factor applied to account for shock loading. The final design uses easy-to-manufacture simple radii and connecting lines in two dimensions. The resulting sprocket achieved a 35% reduction from the blank sprocket weight of 605 grams—only 30g heavier than the smaller 36T sprocket despite having a significantly larger radius. The 40T sprocket was then tested over 200 miles of track driving, validating the design under real conditions.`,
+        body: `The final iterations incorporated feedback from manufacturing constraints, resulting in a simple, producible geometry. The mesh contained roughly 46,000 elements. Using both SolidWorks FEA and Ansys Mechanical, I determined a factor of safety of 2.56 at 393 grams. A zero-based fatigue life analysis was performed with a 1.25 scale factor applied to account for shock loading. The final design uses easy-to-manufacture cuts from simple radii and tangent lines connecting them. The resulting sprocket achieved a 35% reduction from the blank sprocket weight of 605 grams.This design is only 30g heavier than the smaller 36T sprocket despite having a significantly larger radius. The 40T sprocket was then tested over 200 miles of track driving, validating the design under real conditions.`,
         images: [
           { src: '/images/Drivetrain/mesh.jpg' },
           { src: '/images/Drivetrain/sim 256.jpg' },
@@ -96,7 +96,7 @@ export const projects = [
       },
       {
         heading: 'Turnbuckle Mechanical Testing',
-        body: `FEA simulations of the turnbuckle assembly showed unreasonably low factors of safety due to idealized thread geometry creating severe stress concentrations. I had an extra set of turnbuckles ordered, so I decided to perform mechanical testing to determine the real factor of safety. Testing was performed with an Instron mechanical testing machine set at 1mm displacement per minute, pressing the turnbuckle until plastic deformation was detected. The aluminum turnbuckle showed a factor of safety of 2.03 on the critical sprocket-side mount and 16.25 on the exhaust side. Given the criticality of the sprocket-side turnbuckle, I specified titanium for the turnbuckle shaft to achieve the necessary factor of safety while accounting for buckling support present during testing.`,
+        body: `FEA simulations of the turnbuckle assembly showed unreasonably low factors of safety due to idealized thread geometry creating severe stress concentrations. I had an extra set of turnbuckles ordered, so I decided to perform mechanical testing to determine the true factor of safety. Testing was performed with an Instron mechanical testing machine set at 1mm displacement per minute, pressing the turnbuckle until buckling was detected. The aluminum turnbuckle showed a factor of safety of 3.03 on the critical sprocket-side mount and 16.25 on the exhaust side. Given the criticality of the sprocket-side turnbuckle, I selected titanium for the turnbuckle shaft to achieve higher reliability while accounting for buckling support present during testing.`,
         images: [
           { src: '/images/Drivetrain/turnbuck.jpeg' },
           { src: '/images/Drivetrain/turnbuckle.jpeg' },
