@@ -278,6 +278,65 @@
   background: var(--navy);
 }
 
+/* Inline section images */
+.sectionImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.sectionImageItem {
+  cursor: zoom-in;
+}
+
+.sectionImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.sectionImage:hover {
+  opacity: 0.85;
+}
+
+.sectionImageCaption {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* Closing full-width image */
+.closingImage {
+  cursor: zoom-in;
+  max-width: 1000px;
+  margin: 0 auto 80px;
+  padding: 0 48px;
+}
+
+.closingImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.closingImg:hover {
+  opacity: 0.85;
+}
+
+.closingCaption {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
 /* Export-control / proprietary notice banner */
 .noticeBanner {
   background: var(--gray-light);

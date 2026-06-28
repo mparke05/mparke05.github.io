@@ -110,7 +110,7 @@ export default function ProjectPage() {
           </RevealSection>
 
           <div className={styles.sections}>
-            {project.sections.map(({ heading, body, bullets }, i) => (
+            {project.sections.map(({ heading, body, bullets, images }, i) => (
               <RevealSection key={heading} delay={i * 70}>
                 <div className={styles.section}>
                   <h2 className={styles.sectionHeading}>{heading}</h2>
@@ -122,12 +122,39 @@ export default function ProjectPage() {
                       ))}
                     </ul>
                   )}
+                  {images && (
+                    <div className={styles.sectionImages}>
+                      {images.map((img, idx) => (
+                        <div key={idx} className={styles.sectionImageItem}>
+                          <img
+                            src={img.src}
+                            alt={img.caption || `Section image ${idx + 1}`}
+                            className={styles.sectionImage}
+                            onClick={() => setLightbox(img.src)}
+                          />
+                          {img.caption && (
+                            <p className={styles.sectionImageCaption}>{img.caption}</p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </RevealSection>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Closing image */}
+      {project.closingImage && (
+        <div className={styles.closingImage} onClick={() => setLightbox(project.closingImage.src)}>
+          <img src={project.closingImage.src} alt={project.closingImage.caption} className={styles.closingImg} />
+          {project.closingImage.caption && (
+            <p className={styles.closingCaption}>{project.closingImage.caption}</p>
+          )}
+        </div>
+      )}
 
       {/* Photo gallery — only rendered when project.gallery is defined */}
       {project.gallery && (
