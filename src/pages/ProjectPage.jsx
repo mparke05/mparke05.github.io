@@ -114,7 +114,9 @@ export default function ProjectPage() {
               <RevealSection key={heading} delay={i * 70}>
                 <div className={styles.section}>
                   <h2 className={styles.sectionHeading}>{heading}</h2>
-                  <p className={styles.sectionBody}>{body}</p>
+                  {body.split('\n\n').map((para, pi) => (
+                    <p key={pi} className={styles.sectionBody}>{para}</p>
+                  ))}
                   {bullets && (
                     <ul className={styles.sectionList}>
                       {bullets.map((item) => (
